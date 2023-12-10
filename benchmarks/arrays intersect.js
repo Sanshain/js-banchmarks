@@ -43,7 +43,7 @@ function exclude(arr, arr2) {
     return arr.filter(item => !arr2.includes(item))
 }
 
-function exclude2(arr, arr2) {
+function excludeSet(arr, arr2) {
     const set = new Set(arr2);
     return arr.filter(item => !set.has(item))
 }
@@ -51,5 +51,5 @@ function exclude2(arr, arr2) {
 const [arr, arr2] = [_createArr(), _createArr2()];
 
 test$(exclude, [arr, arr2])
-test$(exclude2, [arr, arr2])
+test$(excludeSet, [arr, arr2])
 
